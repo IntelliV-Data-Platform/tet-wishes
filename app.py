@@ -107,9 +107,9 @@ item = random.choice(loi_chuc_song_ngu)
 
 st.markdown(f"""
     <div class='wish-box'>
-        <h1 style='color: #FF4B4B; text-align: center; font-size: 36px'>{item['vn']}</h1>
-        <h2 style='color: #B8860B; text-align: center; font-size: 33px'>{item['cn']}</h2>
-        <p style='font-size: 18px; text-align: center; color: #555;'><i>{item['pinyin']}</i></p>
+        <h1 style='color: #FF4B4B; text-align: center; font-size: clamp(18px, 6vw, 36px); /* Tự co giãn kích thước */'>{item['vn']}</h1>
+        <h2 style='color: #B8860B; text-align: center; font-size: clamp(16px, 6vw, 33px); /* Tự co giãn kích thước */'>{item['cn']}</h2>
+        <p style='font-size: clamp(9px, 6vw, 18px); /* Tự co giãn kích thước */x; text-align: center; color: #555;'><i>{item['pinyin']}</i></p>
         <hr>
     </div>
     """, unsafe_allow_html=True)
@@ -123,7 +123,7 @@ st.markdown("""
     div.stButton > button:first-child {
         background-color: #FF4B4B; /* Màu đỏ Tết */
         color: #FFFFFF; /* Chữ trắng (hoặc dùng #D4AF37 cho màu vàng kim) */
-        font-size: 20px;
+        font-size: clamp(10px, 6vw, 20px); /* Tự co giãn kích thước */
         font-weight: bold;
         border-radius: 50px; /* Bo tròn nút */
         border: 2px solid #D4AF37; /* Viền vàng kim */
