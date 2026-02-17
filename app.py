@@ -17,20 +17,14 @@ loi_chuc_song_ngu = [
     {"cn": "吉星高照", "pinyin": "Jí xīng gāo zhào", "vn": "Cát tinh cao chiếu - Ngôi sao may mắn luôn soi sáng cho bạn."}
 ]
 
-# 0. ÂM THANH: Chèn nhạc Xuân không lời (Tự động phát nếu trình duyệt cho phép)
+# 1. ÂM THANH: Chèn nhạc Xuân không lời (Tự động phát nếu trình duyệt cho phép)
 st.components.v1.html(
     """
-    <iframe src="https://www.youtube.com/watch?v=8EX-TujAa0A&list=RD8EX-TujAa0A?autoplay=1&loop=1&playlist=S8L6_fCAnW8" 
+    <iframe src="https://www.youtube.com/watch?v=8EX-TujAa0A&list=RD8EX-TujAa0A?autoplay=1&loop=1" 
     width="0" height="0" frameborder="0" allow="autoplay"></iframe>
     """,
     height=0,
 )
-
-# 1. NÚT BẤM CÁ CÁNH
-col1, col2, col3 = st.columns([1,2,1])
-with col2:
-    if st.button('🧧 NHẬN QUẺ MAY MẮN KHÁC 🧧'):
-        st.rerun()
 
 # 2. HÌNH ẢNH: Banner Tết (Sử dụng ảnh minh họa rực rỡ)
 st.image("https://brocanvas.vn/wp-content/uploads/2025/11/Anh-chu-ngua-Chuc-mung-nam-moi-2026-ngo-nghinh.jpg?auto=format&fit=crop&q=80&w=1000", 
@@ -69,7 +63,13 @@ st.markdown(f"""
 
 st.write("") # Tạo khoảng trống
 
-# 5. VIDEO: Chèn clip pháo hoa hoặc không khí Tết
+# 5. NÚT BẤM CÁ CÁNH
+col1, col2, col3 = st.columns([1,2,1])
+with col2:
+    if st.button('🧧 NHẬN QUẺ MAY MẮN KHÁC 🧧'):
+        st.rerun()
+
+# 6. VIDEO: Chèn clip pháo hoa hoặc không khí Tết
 #st.video("https://www.youtube.com/watch?v=8EX-TujAa0A&list=RD8EX-TujAa0A&start_radio=1&autoplay=1") # Clip ngắn về không khí Tết
 
 
