@@ -139,7 +139,6 @@ video_id = "8EX-TujAa0A"
 list_nhac_xuan = [
     "8EX-TujAa0A", # Cả Xóm Khen Nghe List Nhạc Tết Remake Gì Mà Hay Dữ Dậy, Cho Link Mở Nghe Chung Thì Được Lì Xì 5 Xị
     "oma6S1qOGS8", # Nhạc Xuân sôi động
-    "P8VJ_Ffeq-Q", # Nhạc Xuân không lời
     "JhkMUqckRv8", # Tết Lofi nhẹ nhàng
     "3QHPuydn4y4", # Nhạc Tết Disco 2
     "z_zxcak6b-I"  # Nhạc Tết Disco 1
