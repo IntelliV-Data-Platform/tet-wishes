@@ -170,13 +170,7 @@ st.markdown("""
 # không cần dùng cột (columns) nếu mục tiêu chỉ là đưa nó ra giữa.
 if st.button('🧧 NHẬN QUẺ MAY MẮN KHÁC 🧧'):
     st.rerun()
-
-# Để nút bấm nằm giữa trang một cách an toàn nhất trên mobile, 
-# không cần dùng cột (columns) nếu mục tiêu chỉ là đưa nó ra giữa.
-if st.button('🧧 NHẬN QUẺ MAY MẮN KHÁC 🧧'):
-    st.rerun()
-
-
+    
 # 5. ÂM THANH: Chèn nhạc Xuân không lời (Tự động phát nếu trình duyệt cho phép)
 # Mã ID của video YouTube (Ví dụ bài nhạc Xuân)
 video_id = "8EX-TujAa0A" 
