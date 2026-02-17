@@ -89,6 +89,29 @@ st.markdown(f"""
 st.write("") # Tạo khoảng trống
 
 # 5. NÚT BẤM CÁ CÁNH
+st.markdown("""
+    <style>
+    /* Định dạng nút bấm Streamlit */
+    div.stButton > button:first-child {
+        background-color: #FF4B4B; /* Màu đỏ Tết */
+        color: #FFFFFF; /* Chữ trắng (hoặc dùng #D4AF37 cho màu vàng kim) */
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 50px; /* Bo tròn nút */
+        border: 2px solid #D4AF37; /* Viền vàng kim */
+        padding: 10px 24px;
+        width: 100%; /* Chiếm hết chiều ngang của cột col2 */
+        transition: all 0.3s ease;
+    }
+    
+    /* Hiệu ứng khi di chuột vào nút */
+    div.stButton > button:first-child:hover {
+        background-color: #D4AF37; /* Đổi sang nền vàng */
+        color: #FF4B4B; /* Chữ đỏ */
+        border: 2px solid #FF4B4B;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 col1, col2, col3 = st.columns([1,2,1])
 with col2:
     if st.button('🧧 NHẬN QUẺ MAY MẮN KHÁC 🧧'):
