@@ -42,7 +42,7 @@ st.markdown("""
     .wish-box {
         background-color: #fce4ec;
         border-radius: 15px;
-        padding: 20px;
+        padding: 10px;
         border: 2px solid #ff4b4b;
         text-align: center;
     }
@@ -54,17 +54,17 @@ item = random.choice(loi_chuc_song_ngu)
 
 st.markdown(f"""
     <div class='wish-box'>
-        <h1 style='color: #FF4B4B; font-size: 50px;'>{item['cn']}</h1>
+        <h1 style='color: #B8860B;'>{item['vn']}</h1>
+        <h2 style='color: #FF4B4B; font-size: 50px;'>{item['cn']}</h2>
         <p style='font-size: 20px; color: #555;'><i>{item['pinyin']}</i></p>
         <hr>
-        <h3 style='color: #B8860B;'>{item['vn']}</h3>
     </div>
     """, unsafe_allow_html=True)
 
 st.write("") # Tạo khoảng trống
 
 # 5. VIDEO: Chèn clip pháo hoa hoặc không khí Tết
-st.video("https://www.youtube.com/watch?v=R9K13pD6yG4") # Clip ngắn về không khí Tết
+st.video("https://www.youtube.com/watch?v=8EX-TujAa0A&list=RD8EX-TujAa0A&start_radio=1") # Clip ngắn về không khí Tết
 
 # 6. NÚT BẤM CÁ CÁNH
 col1, col2, col3 = st.columns([1,2,1])
