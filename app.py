@@ -83,7 +83,7 @@ st.markdown("""
         white-space: nowrap; 
         margin: 0 auto; /* Căn giữa block */
         padding-top: 10px;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
     '>
         🏮 XUÂN BÍNH NGỌ 2026 🏮
     </h1>
