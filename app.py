@@ -17,14 +17,20 @@ loi_chuc_song_ngu = [
     {"cn": "吉星高照", "pinyin": "Jí xīng gāo zhào", "vn": "Cát tinh cao chiếu - Ngôi sao may mắn luôn soi sáng cho bạn."}
 ]
 
-# 1. ÂM THANH: Chèn nhạc Xuân không lời (Tự động phát nếu trình duyệt cho phép)
+# 0. ÂM THANH: Chèn nhạc Xuân không lời (Tự động phát nếu trình duyệt cho phép)
 st.components.v1.html(
     """
-    <iframe src="https://www.youtube.com/embed/S8L6_fCAnW8?autoplay=1&loop=1&playlist=S8L6_fCAnW8" 
+    <iframe src="https://www.youtube.com/watch?v=8EX-TujAa0A&list=RD8EX-TujAa0A?autoplay=1&loop=1&playlist=S8L6_fCAnW8" 
     width="0" height="0" frameborder="0" allow="autoplay"></iframe>
     """,
     height=0,
 )
+
+# 1. NÚT BẤM CÁ CÁNH
+col1, col2, col3 = st.columns([1,2,1])
+with col2:
+    if st.button('🧧 NHẬN QUẺ MAY MẮN KHÁC 🧧'):
+        st.rerun()
 
 # 2. HÌNH ẢNH: Banner Tết (Sử dụng ảnh minh họa rực rỡ)
 st.image("https://brocanvas.vn/wp-content/uploads/2025/11/Anh-chu-ngua-Chuc-mung-nam-moi-2026-ngo-nghinh.jpg?auto=format&fit=crop&q=80&w=1000", 
@@ -54,8 +60,8 @@ item = random.choice(loi_chuc_song_ngu)
 
 st.markdown(f"""
     <div class='wish-box'>
-        <h1 style='color: #B8860B;'>{item['vn']}</h1>
-        <h2 style='color: #FF4B4B; font-size: 50px;'>{item['cn']}</h2>
+        <h1 style='color: #FF4B4B;'>{item['vn']}</h1>
+        <h2 style='color: #B8860B; font-size: 50px;'>{item['cn']}</h2>
         <p style='font-size: 20px; color: #555;'><i>{item['pinyin']}</i></p>
         <hr>
     </div>
@@ -64,13 +70,9 @@ st.markdown(f"""
 st.write("") # Tạo khoảng trống
 
 # 5. VIDEO: Chèn clip pháo hoa hoặc không khí Tết
-st.video("https://www.youtube.com/watch?v=8EX-TujAa0A&list=RD8EX-TujAa0A&start_radio=1") # Clip ngắn về không khí Tết
+#st.video("https://www.youtube.com/watch?v=8EX-TujAa0A&list=RD8EX-TujAa0A&start_radio=1&autoplay=1") # Clip ngắn về không khí Tết
 
-# 6. NÚT BẤM CÁ CÁNH
-col1, col2, col3 = st.columns([1,2,1])
-with col2:
-    if st.button('🧧 NHẬN QUẺ MAY MẮN KHÁC 🧧'):
-        st.rerun()
+
 
 st.markdown("---")
 st.markdown("<p style='text-align: center;'>Chúc mừng Mùng 1 Tết! Hy vọng bạn có một năm rực rỡ như những đóa mai vàng.</p>", unsafe_allow_html=True)
