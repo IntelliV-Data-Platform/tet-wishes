@@ -113,17 +113,17 @@ st.markdown(f"""
         justify-content: center; 
         text-align: center; 
         width: 100%;'>
-        <h1 style='color: #FF4B4B;font-size: clamp(18px, 7vw, 30px);width: 100%; 
+        <h1 style='color: #FF4B4B;font-size: clamp(16px, 7vw, 30px);width: 100%; 
             margin: 10px 0;'>
             {item['vn']}
         </h1>        
         <h2 style='color: #B8860B; 
-            font-size: clamp(16px, 6vw, 28px); 
+            font-size: clamp(14px, 6vw, 28px); 
             width: 100%; 
             margin: 5px 0;'>
             {item['cn']}
         </h2>       
-        <p style='font-size: clamp(14px, 4vw, 20px); 
+        <p style='font-size: clamp(12px, 4vw, 20px); 
             color: #555; 
             width: 100%; 
             margin: 0;'>
