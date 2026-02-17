@@ -78,6 +78,32 @@ st.markdown("<h1 style='text-align: center; color: #D4AF37;'>🏮 XUÂN BÍNH NG
 # CSS để tạo khung lời chúc đẹp hơn
 st.markdown("""
     <style>
+    /* Ẩn thanh header và footer của Streamlit */
+    header {visibility: hidden;}
+    footer {visibility: hidden;}
+    #MainMenu {visibility: hidden;}
+
+    /* Tạo hiệu ứng đổ bóng cho khung lời chúc */
+    .wish-box {
+        box-shadow: 0 4px 15px rgba(255, 75, 75, 0.3);
+        background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+        border-radius: 20px;
+        padding: 25px;
+        margin-top: -20px; /* Kéo lên sát banner để giảm khoảng trống */
+    }
+
+    /* Định dạng lại nút bấm cho nổi bật */
+    div.stButton > button {
+        width: 100%;
+        background-color: #d4af37 !important; /* Màu vàng kim */
+        color: #8b0000 !important; /* Chữ đỏ đậm */
+        border: 2px solid #8b0000 !important;
+        font-weight: bold !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+st.markdown("""
+    <style>
     .wish-box {
         background-color: #fce4ec;
         border-radius: 15px;
