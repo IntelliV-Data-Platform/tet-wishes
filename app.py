@@ -73,7 +73,20 @@ st.image("https://brocanvas.vn/wp-content/uploads/2025/11/Anh-chu-ngua-Chuc-mung
 st.balloons()
 
 # 3. TRÌNH BÀY LỜI CHÚC
-st.markdown("<h1 style='text-align: center; color: #D4AF37;'>🏮 XUÂN BÍNH NGỌ 2026 🏮</h1>", unsafe_allow_html=True)
+st.markdown("""
+    <h1 style='
+        text-align: center; 
+        color: #D4AF37; 
+        white-space: nowrap; 
+        font-size: clamp(20px, 8vw, 60px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-top: 0px;
+        padding-top: 0px;
+    '>
+        🏮 XUÂN BÍNH NGỌ 2026 🏮
+    </h1>
+    """, unsafe_allow_html=True)
 
 # CSS để tạo khung lời chúc đẹp hơn
 st.markdown("""
@@ -94,8 +107,12 @@ item = random.choice(loi_chuc_song_ngu)
 
 st.markdown(f"""
     <div class='wish-box'>
-        <h1 style='color: #FF4B4B; font-size: 38px;'>{item['vn']}</h1>
-        <h2 style='color: #B8860B; font-size: 36px;'>{item['cn']}</h2>
+        <h1 style='color: #FF4B4B; white-space: nowrap; 
+        font-size: clamp(20px, 8vw, 60px);
+        overflow: hidden;'>{item['vn']}</h1>
+        <h2 style='color: #B8860B; white-space: nowrap; 
+        font-size: clamp(20px, 8vw, 60px);
+        overflow: hidden;'>{item['cn']}</h2>
         <p style='font-size: 18px; color: #555;'><i>{item['pinyin']}</i></p>
         <hr>
     </div>
