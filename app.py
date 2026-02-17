@@ -75,17 +75,19 @@ st.balloons()
 # 3. TRÌNH BÀY LỜI CHÚC
 st.markdown("""
     <h1 style='
+        display: block;
+        width: 100%;
         text-align: center; 
         color: #D4AF37; 
-        font-size: 20px;
-        text-overflow: ellipsis;
-        margin-top: 0px;
+        font-size: clamp(20px, 6vw, 40px); /* Tự co giãn kích thước */
+        white-space: nowrap; 
+        margin: 0 auto; /* Căn giữa block */
         padding-top: 10px;
+        padding-bottom: 10px;
     '>
         🏮 XUÂN BÍNH NGỌ 2026 🏮
     </h1>
     """, unsafe_allow_html=True)
-
 # CSS để tạo khung lời chúc đẹp hơn
 st.markdown("""
     <style>
