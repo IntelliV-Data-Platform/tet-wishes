@@ -1,5 +1,6 @@
 import streamlit as st
 import random
+import time
 
 # Cấu hình trang với giao diện Tết
 st.set_page_config(
