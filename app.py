@@ -113,7 +113,7 @@ st.markdown(f"""
         justify-content: center; 
         text-align: center; 
         width: 100%;'>
-        <h1 style='color: #FF4B4B;font-size: clamp(18px, 7vw, 33px);width: 100%; 
+        <h1 style='color: #FF4B4B;font-size: clamp(18px, 7vw, 30px);width: 100%; 
             margin: 10px 0;'>
             {item['vn']}
         </h1>        
