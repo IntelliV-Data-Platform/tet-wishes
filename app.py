@@ -77,12 +77,10 @@ st.markdown("""
     <h1 style='
         text-align: center; 
         color: #D4AF37; 
-        white-space: nowrap; 
-        font-size: clamp(10px, 8vw, 40px);
-        overflow: hidden;
+        font-size: 40px;
         text-overflow: ellipsis;
         margin-top: 0px;
-        padding-top: 0px;
+        padding-top: 2px;
     '>
         🏮 XUÂN BÍNH NGỌ 2026 🏮
     </h1>
@@ -107,13 +105,9 @@ item = random.choice(loi_chuc_song_ngu)
 
 st.markdown(f"""
     <div class='wish-box'>
-        <h1 style='color: #FF4B4B; white-space: nowrap; 
-        font-size: clamp(15px, 8vw, 38px);
-        overflow: hidden;'>{item['vn']}</h1>
-        <h2 style='color: #B8860B; white-space: nowrap; 
-        font-size: clamp(13px, 8vw, 36px);
-        overflow: hidden;'>{item['cn']}</h2>
-        <p style='font-size: 18px; color: #555;'><i>{item['pinyin']}</i></p>
+        <h1 style='color: #FF4B4B; text-align: center; font-size: 38px'>{item['vn']}</h1>
+        <h2 style='color: #B8860B; text-align: center; font-size: 36px'>{item['cn']}</h2>
+        <p style='font-size: 18px; text-align: center; color: #555;'><i>{item['pinyin']}</i></p>
         <hr>
     </div>
     """, unsafe_allow_html=True)
