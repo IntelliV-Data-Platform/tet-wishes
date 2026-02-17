@@ -82,7 +82,7 @@ st.markdown("""
         margin-top: 0px;
         padding-top: 10px;
     '>
-        🏮XUÂN BÍNH NGỌ 2026🏮
+        🏮 XUÂN BÍNH NGỌ 2026 🏮
     </h1>
     """, unsafe_allow_html=True)
 
