@@ -10,17 +10,42 @@ st.set_page_config(
 
 # Danh sách lời chúc song ngữ Trung - Việt
 loi_chuc_song_ngu = [
-    {"cn": "万事如意", "pinyin": "Wàn shì rú yì", "vn": "Vạn sự như ý - Mọi việc đều tốt đẹp như ý muốn."},
-    {"cn": "身体健康", "pinyin": "Shēn tǐ jiàn kāng", "vn": "Sức khỏe dồi dào - Thân thể luôn mạnh khỏe, an khang."},
-    {"cn": "心想事成", "pinyin": "Xīn xiǎng shì chéng", "vn": "Sớm đạt ý nguyện - Những gì bạn mong cầu đều thành hiện thực."},
-    {"cn": "阖家平安", "pinyin": "Hé jiā píng'ān", "vn": "Gia đạo bình an - Cả nhà luôn yên ấm, hòa thuận."},
-    {"cn": "吉星高照", "pinyin": "Jí xīng gāo zhào", "vn": "Cát tinh cao chiếu - Ngôi sao may mắn luôn soi sáng cho bạn."}
+    # --- CÔNG DANH & SỰ NGHIỆP ---
+    {"vn": "Công việc thuận lợi, sự nghiệp thăng tiến.", "cn": "事业有成, 大展宏图", "pinyin": "Shìyè yǒu chéng, dà zhǎn hóng tú"},
+    {"vn": "Thăng quan tiến chức, phát tài phát lộc.", "cn": "升官发财", "pinyin": "Shēng guān fā cái"},
+    {"vn": "Mã đáo thành công.", "cn": "马到成功", "pinyin": "Mǎ dào chéng gōng"},
+    {"vn": "Một vốn bốn lời, làm ăn phát đạt.", "cn": "一本万利", "pinyin": "Yī běn wàn lì"},
+    {"vn": "Tiền vào như nước, tài lộc dồi dào.", "cn": "财源广进", "pinyin": "Cái yuán guǎng jìn"},
+    {"vn": "Thuận buồm xuôi gió.", "cn": "一帆风顺", "pinyin": "Yī fān fēng shùn"},
+    {"vn": "Khởi đầu thuận lợi, vạn sự thành công.", "cn": "旗开得胜", "pinyin": "Qí kāi dé shèng"},
+
+    # --- SỨC KHỎE & BÌNH AN ---
+    {"vn": "Phúc như Đông Hải, Thọ tỷ Nam Sơn.", "cn": "福如东海, 寿比南山", "pinyin": "Fú rú dōng hǎi, shòu bǐ nán shān"},
+    {"vn": "Tinh thần minh mẫn, thân thể kiện khang.", "cn": "精神焕发, 身体健康", "pinyin": "Jīng shén huàn fā, shēn tǐ jiàn kāng"},
+    {"vn": "Sống lâu trăm tuổi, bách niên giai lão.", "cn": "长命百岁", "pinyin": "Cháng mìng bǎi suì"},
+    {"vn": "Mọi sự bình an, cát tường như ý.", "cn": "一切平安, 吉祥如意", "pinyin": "Yī qiè píng'ān, jí xiáng rú yì"},
+    {"vn": "An khang thịnh vượng, đời đời ấm no.", "cn": "安康兴旺", "pinyin": "Ānkāng xīngwàng"},
+
+    # --- GIA ĐÌNH & HẠNH PHÚC ---
+    {"vn": "Gia đình hạnh phúc, sum vầy vui vẻ.", "cn": "合家欢乐", "pinyin": "Hé jiā huān lè"},
+    {"vn": "Ngũ phúc lâm môn (5 phúc đức đến nhà).", "cn": "五福临门", "pinyin": "Wǔ fú lín mén"},
+    {"vn": "Gia hòa vạn sự hưng (Nhà yên mọi sự thịnh).", "cn": "家和万事兴", "pinyin": "Jiā hé wàn shì xīng"},
+    {"vn": "Con cháu đầy đàn, hiển vinh rạng rỡ.", "cn": "儿孙满堂", "pinyin": "Ér sūn mǎn táng"},
+
+    # --- TÌNH DUYÊN & CUỘC SỐNG ---
+    {"vn": "Muốn gì được nấy, cầu gì được nấy.", "cn": "从心所欲", "pinyin": "Cóng xīn suǒ yù"},
+    {"vn": "Tình sâu nghĩa nặng, bạc đầu giai lão.", "cn": "白头偕老", "pinyin": "Bái tóu xié lǎo"},
+    {"vn": "Luôn luôn vui vẻ, nụ cười trên môi.", "cn": "笑口常开", "pinyin": "Xiào kǒu cháng kāi"},
+    {"vn": "Trẻ mãi không già, rạng rỡ như hoa.", "cn": "青春永驻", "pinyin": "Qīng chūn yǒng zhù"}
 ]
 
 # 1. ÂM THANH: Chèn nhạc Xuân không lời (Tự động phát nếu trình duyệt cho phép)
+# Mã ID của video YouTube (Ví dụ bài nhạc Xuân)
+video_id = "8EX-TujAa0A" 
+
 st.components.v1.html(
-    """
-    <iframe src="https://www.youtube.com/watch?v=8EX-TujAa0A&list=RD8EX-TujAa0A?autoplay=1&loop=1" 
+    f"""
+    <iframe src="https://www.youtube.com/embed/{video_id}?autoplay=1&loop=1&playlist={video_id}&mute=0" 
     width="0" height="0" frameborder="0" allow="autoplay"></iframe>
     """,
     height=0,
