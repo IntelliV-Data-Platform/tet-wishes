@@ -93,9 +93,9 @@ item = random.choice(loi_chuc_song_ngu)
 
 st.markdown(f"""
     <div class='wish-box'>
-        <h1 style='color: #FF4B4B; font-size: 68px;'>{item['vn']}</h1>
-        <h2 style='color: #B8860B; font-size: 38px;'>{item['cn']}</h2>
-        <p style='font-size: 20px; color: #555;'><i>{item['pinyin']}</i></p>
+        <h1 style='color: #FF4B4B; font-size: 38px;'>{item['vn']}</h1>
+        <h2 style='color: #B8860B; font-size: 36px;'>{item['cn']}</h2>
+        <p style='font-size: 18px; color: #555;'><i>{item['pinyin']}</i></p>
         <hr>
     </div>
     """, unsafe_allow_html=True)
