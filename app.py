@@ -27,7 +27,7 @@ st.components.v1.html(
 )
 
 # 2. HÌNH ẢNH: Banner Tết (Sử dụng ảnh minh họa rực rỡ)
-st.image("https://images.unsplash.com/photo-1582234372722-50d7ccc30ebd?auto=format&fit=crop&q=80&w=1000", 
+st.image("https://brocanvas.vn/wp-content/uploads/2025/11/Anh-chu-ngua-Chuc-mung-nam-moi-2026-ngo-nghinh.jpg?auto=format&fit=crop&q=80&w=1000", 
          use_container_width=True, caption="Chúc Mừng Năm Mới 2026")
 
 # 3. HIỆU ỨNG: Pháo hoa (Balloons)
