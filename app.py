@@ -106,30 +106,25 @@ st.markdown("""
 item = random.choice(loi_chuc_song_ngu)
 
 st.markdown(f"""
-    <div class='wish-box' style='
-        display: flex; 
-        flex-direction: column; 
-        align-items: center; 
-        justify-content: center; 
-        text-align: center; 
+    <div style='background-color: #fff5f5;
+        border-radius: 20px;
+        padding: 20px;
+        border: 2px solid #ff4b4b;
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
         width: 100%;'>
-        <h1 style='color: #FF4B4B;font-size: clamp(16px, 7vw, 30px);width: 100%; 
-            margin: 10px 0;'>
+        <div style='color: #FF4B4B; font-size: clamp(16px, 7vw, 30px); font-weight: bold; line-height: 1.2; margin-bottom: 10px;'>
             {item['vn']}
-        </h1>        
-        <h2 style='color: #B8860B; 
-            font-size: clamp(14px, 6vw, 28px); 
-            width: 100%; 
-            margin: 5px 0;'>
+        </div>        
+        <div style='color: #B8860B; font-size: clamp(14px, 6vw, 28px); font-weight: bold; line-height: 1.2; margin-bottom: 5px;'>
             {item['cn']}
-        </h2>       
-        <p style='font-size: clamp(12px, 4vw, 20px); 
-            color: #555; 
-            width: 100%; 
-            margin: 0;'>
-            <i>{item['pinyin']}</i>
-        </p>        
-        <hr style='width: 80%; border: 0.5px solid #eee; margin-top: 15px;'>
+        </div>        
+        <div style='font-size: clamp(12px, 4vw, 26px); color: #555; font-style: italic; margin-bottom: 15px;'>
+            {item['pinyin']}
+        </div>        
+        <hr style='border: 0; border-top: 1px solid #ffcccc; width: 80%; margin: 0 auto;'>
     </div>
     """, unsafe_allow_html=True)
 
