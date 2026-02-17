@@ -107,9 +107,9 @@ item = random.choice(loi_chuc_song_ngu)
 
 st.markdown(f"""
     <div class='wish-box'>
-        <h1 style='color: #FF4B4B; text-align: center; font-size: clamp(18px, 6vw, 33px); /* Tự co giãn kích thước */'>{item['vn']}</h1>
-        <h2 style='color: #B8860B; text-align: center; font-size: clamp(16px, 6vw, 28px); /* Tự co giãn kích thước */'>{item['cn']}</h2>
-        <p style='font-size: clamp(9px, 6vw, 18px); /* Tự co giãn kích thước */x; text-align: center; color: #555;'><i>{item['pinyin']}</i></p>
+        <h1 style='color: #FF4B4B; text-align: center; font-size: clamp(18px, 6vw, 33px); /* Tự co giãn kích thước */margin: 0 auto; /* Căn giữa block */'>{item['vn']}</h1>
+        <h2 style='color: #B8860B; text-align: center; font-size: clamp(16px, 6vw, 28px); /* Tự co giãn kích thước */margin: 0 auto; /* Căn giữa block */'>{item['cn']}</h2>
+        <p style='font-size: clamp(9px, 6vw, 18px); /* Tự co giãn kích thước */x; text-align: center; color: #555;margin: 0 auto; /* Căn giữa block */'><i>{item['pinyin']}</i></p>
         <hr>
     </div>
     """, unsafe_allow_html=True)
