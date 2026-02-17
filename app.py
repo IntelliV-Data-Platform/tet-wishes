@@ -77,7 +77,7 @@ st.markdown("""
     <h1 style='
         text-align: center; 
         color: #D4AF37; 
-        font-size: 24px;
+        font-size: 22px;
         text-overflow: ellipsis;
         margin-top: 0px;
         padding-top: 10px;
