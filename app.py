@@ -106,11 +106,42 @@ st.markdown("""
 item = random.choice(loi_chuc_song_ngu)
 
 st.markdown(f"""
-    <div class='wish-box'>
-        <h1 style='color: #FF4B4B; text-align: center; font-size: clamp(18px, 6vw, 33px); /* Tự co giãn kích thước */margin: 0 auto; /* Căn giữa block */'>{item['vn']}</h1>
-        <h2 style='color: #B8860B; text-align: center; font-size: clamp(16px, 6vw, 28px); /* Tự co giãn kích thước */margin: 0 auto; /* Căn giữa block */'>{item['cn']}</h2>
-        <p style='font-size: clamp(9px, 6vw, 18px); /* Tự co giãn kích thước */x; text-align: center; color: #555;margin: 0 auto; /* Căn giữa block */'><i>{item['pinyin']}</i></p>
-        <hr>
+    <div class='wish-box' style='
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+        text-align: center; 
+        width: 100%;
+    '>
+        <h1 style='
+            color: #FF4B4B; 
+            font-size: clamp(18px, 7vw, 33px); 
+            width: 100%; 
+            margin: 10px 0;
+        '>
+            {item['vn']}
+        </h1>
+        
+        <h2 style='
+            color: #B8860B; 
+            font-size: clamp(16px, 6vw, 28px); 
+            width: 100%; 
+            margin: 5px 0;
+        '>
+            {item['cn']}
+        </h2>
+        
+        <p style='
+            font-size: clamp(14px, 4vw, 20px); 
+            color: #555; 
+            width: 100%; 
+            margin: 0;
+        '>
+            <i>{item['pinyin']}</i>
+        </p>
+        
+        <hr style='width: 80%; border: 0.5px solid #eee; margin-top: 15px;'>
     </div>
     """, unsafe_allow_html=True)
 
@@ -130,6 +161,7 @@ st.markdown("""
         padding: 16px 18px;
         width: 100%; /* Chiếm hết chiều ngang của cột col2 */
         transition: all 0.3s ease;
+        margin: 0 auto; /* Căn giữa block */
     }
     
     /* Hiệu ứng khi di chuột vào nút */
