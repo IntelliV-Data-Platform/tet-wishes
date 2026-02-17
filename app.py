@@ -89,7 +89,7 @@ st.markdown("""
         background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
         border-radius: 20px;
         padding: 25px;
-        margin-top: -20px; /* Kéo lên sát banner để giảm khoảng trống */
+        margin-top: -10px; /* Kéo lên sát banner để giảm khoảng trống */
     }
 
     /* Định dạng lại nút bấm cho nổi bật */
