@@ -131,38 +131,45 @@ st.markdown(f"""
 st.write("") # Tạo khoảng trống
 
 # 4. NÚT BẤM CÁ CÁNH
-st.markdown("""<style>
-    /* 1. Căn giữa toàn bộ ứng dụng trên Desktop */
-    .main .block-container {
-        max-width: 600px; /* Giới hạn độ rộng để đẹp trên Desktop */
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 2rem;
-    }
-    /* 2. Căn giữa tiêu đề H1 và các block div */
-    h1, h2, h3, .wish-box {
-        text-align: center !important;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-    }
-    /* 3. Đặc trị nút bấm - Đây là phần quan trọng nhất */
+# 4. NÚT BẤM CÁ CÁNH
+st.markdown("""
+    <style>
+    /* 1. Ép container bọc nút bấm phải nằm giữa */
     div.stButton {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-top: 20px;
+        margin: 0 auto;
     }
-    div.stButton > button {
-        width: auto !important;
-        min-width: 250px; /* Độ rộng tối thiểu để nút trông cân đối */
-        margin: 0 auto !important;
+    /* 2. Định dạng nút bấm */
+    div.stButton > button:first-child {
+        background-color: #FF4B4B !important; /* Dùng !important để ghi đè triệt để */
+        color: #FFFFFF !important;
+        font-size: clamp(14px, 4vw, 20px) !important;
+        font-weight: bold !important;
+        border-radius: 50px !important;
+        border: 2px solid #D4AF37 !important;
+        padding: 12px 24px !important;
+        width: auto !important; /* Để auto để padding giãn đều 2 bên */
+        min-width: 280px; /* Đảm bảo nút đủ dài để cân đối trên mobile */
+        transition: all 0.3s ease !important;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }    
+    /* 3. Hiệu ứng Hover */
+    div.stButton > button:first-child:hover {
+        background-color: #D4AF37 !important;
+        color: #FF4B4B !important;
+        border: 2px solid #FF4B4B !important;
+        transform: scale(1.05); /* Phóng to nhẹ khi chạm vào */
     }
-    /* Ẩn các thành phần thừa */
-    header, footer {visibility: hidden;}
-    </style>""", unsafe_allow_html=True)
+    </style>
+    """, unsafe_allow_html=True)
+
+# Để nút bấm nằm giữa trang một cách an toàn nhất trên mobile, 
+# không cần dùng cột (columns) nếu mục tiêu chỉ là đưa nó ra giữa.
+if st.button('🧧 NHẬN QUẺ MAY MẮN KHÁC 🧧'):
+    st.rerun()
 
 # Để nút bấm nằm giữa trang một cách an toàn nhất trên mobile, 
 # không cần dùng cột (columns) nếu mục tiêu chỉ là đưa nó ra giữa.
