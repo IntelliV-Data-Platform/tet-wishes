@@ -133,32 +133,44 @@ st.write("") # Tạo khoảng trống
 # 4. NÚT BẤM CÁ CÁNH
 st.markdown("""
     <style>
-    /* Định dạng nút bấm Streamlit */
-    div.stButton > button:first-child {
-        background-color: #FF4B4B; /* Màu đỏ Tết */
-        color: #FFFFFF; /* Chữ trắng (hoặc dùng #D4AF37 cho màu vàng kim) */
-        font-size: clamp(10px, 6vw, 20px); /* Tự co giãn kích thước */
-        font-weight: bold;
-        border-radius: 50px; /* Bo tròn nút */
-        border: 2px solid #D4AF37; /* Viền vàng kim */
-        padding: 16px 18px;
-        width: 100%; /* Chiếm hết chiều ngang của cột col2 */
-        transition: all 0.3s ease;
-        margin: 0 auto; /* Căn giữa block */
+    /* 1. Ép container bọc nút bấm phải nằm giữa */
+    div.stButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
     }
-    
-    /* Hiệu ứng khi di chuột vào nút */
+    /* 2. Định dạng nút bấm */
+    div.stButton > button:first-child {
+        background-color: #FF4B4B !important; /* Dùng !important để ghi đè triệt để */
+        color: #FFFFFF !important;
+        font-size: clamp(14px, 4vw, 20px) !important;
+        font-weight: bold !important;
+        border-radius: 50px !important;
+        border: 2px solid #D4AF37 !important;
+        padding: 12px 24px !important;
+        width: auto !important; /* Để auto để padding giãn đều 2 bên */
+        min-width: 280px; /* Đảm bảo nút đủ dài để cân đối trên mobile */
+        transition: all 0.3s ease !important;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }    
+    /* 3. Hiệu ứng Hover */
     div.stButton > button:first-child:hover {
-        background-color: #D4AF37; /* Đổi sang nền vàng */
-        color: #FF4B4B; /* Chữ đỏ */
-        border: 2px solid #FF4B4B;
+        background-color: #D4AF37 !important;
+        color: #FF4B4B !important;
+        border: 2px solid #FF4B4B !important;
+        transform: scale(1.05); /* Phóng to nhẹ khi chạm vào */
     }
     </style>
     """, unsafe_allow_html=True)
-col1, col2, col3 = st.columns([1, 2, 1])
-with col2:
-    if st.button('🧧 NHẬN QUẺ MAY MẮN KHÁC 🧧'):
-        st.rerun()
+
+# Để nút bấm nằm giữa trang một cách an toàn nhất trên mobile, 
+# không cần dùng cột (columns) nếu mục tiêu chỉ là đưa nó ra giữa.
+if st.button('🧧 NHẬN QUẺ MAY MẮN KHÁC 🧧'):
+    st.rerun()
+
+
 # 5. ÂM THANH: Chèn nhạc Xuân không lời (Tự động phát nếu trình duyệt cho phép)
 # Mã ID của video YouTube (Ví dụ bài nhạc Xuân)
 video_id = "8EX-TujAa0A" 
