@@ -102,17 +102,7 @@ st.markdown("""
     }
     </style>
     """, unsafe_allow_html=True)
-st.markdown("""
-    <style>
-    .wish-box {
-        background-color: #fce4ec;
-        border-radius: 15px;
-        padding: 10px;
-        border: 2px solid #ff4b4b;
-        text-align: center;
-    }
-    </style>
-    """, unsafe_allow_html=True)
+
 
 # Chọn ngẫu nhiên
 item = random.choice(loi_chuc_song_ngu)
