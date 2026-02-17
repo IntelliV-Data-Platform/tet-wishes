@@ -113,7 +113,7 @@ st.markdown("""
         font-weight: bold;
         border-radius: 50px; /* Bo tròn nút */
         border: 2px solid #D4AF37; /* Viền vàng kim */
-        padding: 20px 24px;
+        padding: 16px 18px;
         width: 100%; /* Chiếm hết chiều ngang của cột col2 */
         transition: all 0.3s ease;
     }
