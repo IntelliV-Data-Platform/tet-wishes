@@ -78,7 +78,7 @@ st.markdown("""
         text-align: center; 
         color: #D4AF37; 
         white-space: nowrap; 
-        font-size: clamp(20px, 8vw, 60px);
+        font-size: clamp(10px, 8vw, 40px);
         overflow: hidden;
         text-overflow: ellipsis;
         margin-top: 0px;
@@ -108,10 +108,10 @@ item = random.choice(loi_chuc_song_ngu)
 st.markdown(f"""
     <div class='wish-box'>
         <h1 style='color: #FF4B4B; white-space: nowrap; 
-        font-size: clamp(20px, 8vw, 60px);
+        font-size: clamp(15px, 8vw, 38px);
         overflow: hidden;'>{item['vn']}</h1>
         <h2 style='color: #B8860B; white-space: nowrap; 
-        font-size: clamp(20px, 8vw, 60px);
+        font-size: clamp(13px, 8vw, 36px);
         overflow: hidden;'>{item['cn']}</h2>
         <p style='font-size: 18px; color: #555;'><i>{item['pinyin']}</i></p>
         <hr>
