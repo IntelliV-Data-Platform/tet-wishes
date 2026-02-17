@@ -11,6 +11,29 @@ st.set_page_config(
     layout="centered"
 )
 
+# Ép khoảng trống phía trên về 0
+st.markdown("""
+    <style>
+    /* Xóa khoảng cách header mặc định của Streamlit */
+    .block-container {
+        padding-top: 1rem;
+        padding-bottom: 0rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    
+    /* Ẩn bớt các thành phần thừa phía trên */
+    header {visibility: hidden;}
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    
+    /* Thu nhỏ khoảng cách giữa các widget */
+    [data-testid="stVerticalBlock"] {
+        gap: 0rem;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
 # Danh sách lời chúc song ngữ Trung - Việt
 loi_chuc_song_ngu = [
     # --- CÔNG DANH & SỰ NGHIỆP ---
@@ -42,44 +65,14 @@ loi_chuc_song_ngu = [
     {"vn": "Trẻ mãi không già, rạng rỡ như hoa.", "cn": "青春永驻", "pinyin": "Qīng chūn yǒng zhù"}
 ]
 
-# 1. ÂM THANH: Chèn nhạc Xuân không lời (Tự động phát nếu trình duyệt cho phép)
-# Mã ID của video YouTube (Ví dụ bài nhạc Xuân)
-video_id = "8EX-TujAa0A" 
-
-# Danh sách các ID video YouTube nhạc Xuân khác nhau
-# Bạn có thể thêm bao nhiêu tùy thích vào đây
-list_nhac_xuan = [
-    "8EX-TujAa0A", # Cả Xóm Khen Nghe List Nhạc Tết Remake Gì Mà Hay Dữ Dậy, Cho Link Mở Nghe Chung Thì Được Lì Xì 5 Xị
-    "S8L6_fCAnW8", # Nhạc Xuân sôi động
-    "WpXf-nS3p8I", # Nhạc Xuân không lời
-    "mY7XoM2O_p0", # Tết Lofi nhẹ nhàng
-    "R9K13pD6yG4", # Tiếng pháo và nhạc hội
-    "476M6L_NAnM"  # Nhạc Tết truyền thống
-]
-
-# Lấy thời gian hiện tại (giây) để làm "biến số" chọn nhạc
-# Cách này giúp mỗi thời điểm truy cập sẽ ra một bài khác nhau
-second_now = int(time.time())
-index_nhac = second_now % len(list_nhac_xuan)
-video_id = list_nhac_xuan[index_nhac]
-
-# Chèn iframe ẩn với video đã được chọn ngẫu nhiên
-st.components.v1.html(
-    f"""
-    <iframe src="https://www.youtube.com/embed/{video_id}?autoplay=1&loop=1&playlist={video_id}&mute=0" 
-    width="0" height="0" frameborder="0" allow="autoplay"></iframe>
-    """,
-    height=0,
-)
-
-# 2. HÌNH ẢNH: Banner Tết (Sử dụng ảnh minh họa rực rỡ)
+# 1. HÌNH ẢNH: Banner Tết (Sử dụng ảnh minh họa rực rỡ)
 st.image("https://brocanvas.vn/wp-content/uploads/2025/11/Anh-chu-ngua-Chuc-mung-nam-moi-2026-ngo-nghinh.jpg?auto=format&fit=crop&q=80&w=1000", 
          use_container_width=True, caption="Chúc Mừng Năm Mới 2026")
 
-# 3. HIỆU ỨNG: Pháo hoa (Balloons)
+# 2. HIỆU ỨNG: Pháo hoa (Balloons)
 st.balloons()
 
-# 4. TRÌNH BÀY LỜI CHÚC
+# 3. TRÌNH BÀY LỜI CHÚC
 st.markdown("<h1 style='text-align: center; color: #D4AF37;'>🏮 XUÂN BÍNH NGỌ 2026 🏮</h1>", unsafe_allow_html=True)
 
 # CSS để tạo khung lời chúc đẹp hơn
@@ -109,7 +102,7 @@ st.markdown(f"""
 
 st.write("") # Tạo khoảng trống
 
-# 5. NÚT BẤM CÁ CÁNH
+# 4. NÚT BẤM CÁ CÁNH
 st.markdown("""
     <style>
     /* Định dạng nút bấm Streamlit */
@@ -137,6 +130,35 @@ col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
     if st.button('🧧 NHẬN QUẺ MAY MẮN KHÁC 🧧'):
         st.rerun()
+# 5. ÂM THANH: Chèn nhạc Xuân không lời (Tự động phát nếu trình duyệt cho phép)
+# Mã ID của video YouTube (Ví dụ bài nhạc Xuân)
+video_id = "8EX-TujAa0A" 
+
+# Danh sách các ID video YouTube nhạc Xuân khác nhau
+# Bạn có thể thêm bao nhiêu tùy thích vào đây
+list_nhac_xuan = [
+    "8EX-TujAa0A", # Cả Xóm Khen Nghe List Nhạc Tết Remake Gì Mà Hay Dữ Dậy, Cho Link Mở Nghe Chung Thì Được Lì Xì 5 Xị
+    "oma6S1qOGS8", # Nhạc Xuân sôi động
+    "P8VJ_Ffeq-Q", # Nhạc Xuân không lời
+    "JhkMUqckRv8", # Tết Lofi nhẹ nhàng
+    "3QHPuydn4y4", # Nhạc Tết Disco 2
+    "z_zxcak6b-I"  # Nhạc Tết Disco 1
+]
+
+# Lấy thời gian hiện tại (giây) để làm "biến số" chọn nhạc
+# Cách này giúp mỗi thời điểm truy cập sẽ ra một bài khác nhau
+second_now = int(time.time())
+index_nhac = second_now % len(list_nhac_xuan)
+video_id = list_nhac_xuan[index_nhac]
+
+# Chèn iframe ẩn với video đã được chọn ngẫu nhiên
+st.components.v1.html(
+    f"""
+    <iframe src="https://www.youtube.com/embed/{video_id}?autoplay=1&loop=1&playlist={video_id}&mute=0" 
+    width="0" height="0" frameborder="0" allow="autoplay"></iframe>
+    """,
+    height=0,
+)
 
 # 6. VIDEO: Chèn clip pháo hoa hoặc không khí Tết
 #st.video("https://www.youtube.com/watch?v=8EX-TujAa0A&list=RD8EX-TujAa0A&start_radio=1&autoplay=1") # Clip ngắn về không khí Tết
