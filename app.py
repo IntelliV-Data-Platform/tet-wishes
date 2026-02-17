@@ -43,6 +43,24 @@ loi_chuc_song_ngu = [
 # Mã ID của video YouTube (Ví dụ bài nhạc Xuân)
 video_id = "8EX-TujAa0A" 
 
+# Danh sách các ID video YouTube nhạc Xuân khác nhau
+# Bạn có thể thêm bao nhiêu tùy thích vào đây
+list_nhac_xuan = [
+    "8EX-TujAa0A", # Cả Xóm Khen Nghe List Nhạc Tết Remake Gì Mà Hay Dữ Dậy, Cho Link Mở Nghe Chung Thì Được Lì Xì 5 Xị
+    "S8L6_fCAnW8", # Nhạc Xuân sôi động
+    "WpXf-nS3p8I", # Nhạc Xuân không lời
+    "mY7XoM2O_p0", # Tết Lofi nhẹ nhàng
+    "R9K13pD6yG4", # Tiếng pháo và nhạc hội
+    "476M6L_NAnM"  # Nhạc Tết truyền thống
+]
+
+# Lấy thời gian hiện tại (giây) để làm "biến số" chọn nhạc
+# Cách này giúp mỗi thời điểm truy cập sẽ ra một bài khác nhau
+second_now = int(time.time())
+index_nhac = second_now % len(list_nhac_xuan)
+video_id = list_nhac_xuan[index_nhac]
+
+# Chèn iframe ẩn với video đã được chọn ngẫu nhiên
 st.components.v1.html(
     f"""
     <iframe src="https://www.youtube.com/embed/{video_id}?autoplay=1&loop=1&playlist={video_id}&mute=0" 
@@ -112,7 +130,7 @@ st.markdown("""
     }
     </style>
     """, unsafe_allow_html=True)
-col1, col2, col3 = st.columns([1,2,1])
+col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
     if st.button('🧧 NHẬN QUẺ MAY MẮN KHÁC 🧧'):
         st.rerun()
