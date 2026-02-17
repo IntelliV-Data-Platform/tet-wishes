@@ -116,22 +116,19 @@ st.markdown(f"""
         <h1 style='color: #FF4B4B;font-size: clamp(18px, 7vw, 33px);width: 100%; 
             margin: 10px 0;'>
             {item['vn']}
-        </h1>
-        
+        </h1>        
         <h2 style='color: #B8860B; 
             font-size: clamp(16px, 6vw, 28px); 
             width: 100%; 
             margin: 5px 0;'>
             {item['cn']}
-        </h2>
-        
+        </h2>       
         <p style='font-size: clamp(14px, 4vw, 20px); 
             color: #555; 
             width: 100%; 
             margin: 0;'>
             <i>{item['pinyin']}</i>
-        </p>
-        
+        </p>        
         <hr style='width: 80%; border: 0.5px solid #eee; margin-top: 15px;'>
     </div>
     """, unsafe_allow_html=True)
