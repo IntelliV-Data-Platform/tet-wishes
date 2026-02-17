@@ -16,10 +16,10 @@ st.markdown("""
     <style>
     /* Xóa khoảng cách header mặc định của Streamlit */
     .block-container {
-        padding-top: 5rem;
+        padding-top: 1rem;
         padding-bottom: 0rem;
-        padding-left: 5rem;
-        padding-right: 5rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
     
     /* Ẩn bớt các thành phần thừa phía trên */
@@ -113,7 +113,7 @@ st.markdown("""
         font-weight: bold;
         border-radius: 50px; /* Bo tròn nút */
         border: 2px solid #D4AF37; /* Viền vàng kim */
-        padding: 10px 24px;
+        padding: 20px 24px;
         width: 100%; /* Chiếm hết chiều ngang của cột col2 */
         transition: all 0.3s ease;
     }
