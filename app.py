@@ -54,13 +54,13 @@ loi_chuc_song_ngu = [
 
     # --- GIA ĐÌNH & HẠNH PHÚC ---
     {"vn": "Gia đình hạnh phúc, sum vầy vui vẻ.", "cn": "合家欢乐", "pinyin": "Hé jiā huān lè"},
-    {"vn": "Ngũ phúc lâm môn (5 phúc đức đến nhà).", "cn": "五福临门", "pinyin": "Wǔ fú lín mén"},
-    {"vn": "Gia hòa vạn sự hưng (Nhà yên mọi sự thịnh).", "cn": "家和万事兴", "pinyin": "Jiā hé wàn shì xīng"},
+    {"vn": "Ngũ phúc lâm môn.", "cn": "五福临门", "pinyin": "Wǔ fú lín mén"},
+    {"vn": "Gia hòa vạn sự hưng.", "cn": "家和万事兴", "pinyin": "Jiā hé wàn shì xīng"},
     {"vn": "Con cháu đầy đàn, hiển vinh rạng rỡ.", "cn": "儿孙满堂", "pinyin": "Ér sūn mǎn táng"},
 
     # --- TÌNH DUYÊN & CUỘC SỐNG ---
     {"vn": "Muốn gì được nấy, cầu gì được nấy.", "cn": "从心所欲", "pinyin": "Cóng xīn suǒ yù"},
-    {"vn": "Tình sâu nghĩa nặng, bạc đầu giai lão.", "cn": "白头偕老", "pinyin": "Bái tóu xié lǎo"},
+    #{"vn": "Tình sâu nghĩa nặng, bạc đầu giai lão.", "cn": "白头偕老", "pinyin": "Bái tóu xié lǎo"},
     {"vn": "Luôn luôn vui vẻ, nụ cười trên môi.", "cn": "笑口常开", "pinyin": "Xiào kǒu cháng kāi"},
     {"vn": "Trẻ mãi không già, rạng rỡ như hoa.", "cn": "青春永驻", "pinyin": "Qīng chūn yǒng zhù"}
 ]
